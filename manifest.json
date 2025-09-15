@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "First Timer Extension",
+  "version": "1.0.0",
+  "description": "Extension practice",
+  "icons": {
+    "48": "./stopwatch.png",
+    "128": "./stopwatch.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "./stopwatch.png",
+      "24": "./stopwatch.png",
+      "32": "./stopwatch.png"
+    },
+    "default_title": "Timer Extension Tutorial",
+    "default_popup": "index.html"
+  },
+  "options_page": "options.html",
+  "permissions" : [
+    "storage"
+  ]
+}
