@@ -4,10 +4,13 @@ const currentTime = new Date().toLocaleTimeString("en-US", {
   minute: "2-digit",
   hour12: "true",
 });
+let name2 = document.querySelector("#name");
 
 if (content) {
-    content.textContent += " " + currentTime;
+  content.textContent += " " + currentTime;
 }
 
 chrome.action.setBadgeText({ text: "TIME" });
-
+chrome.storage.sync.get(["name"]).then((result) => {
+  name2.textContent += result.name;
+});
